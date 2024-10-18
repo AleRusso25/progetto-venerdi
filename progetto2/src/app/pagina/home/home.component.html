@@ -1,11 +1,10 @@
-<div class="container">
-  
+<div class="container bg-info bg-opacity-5 p-3 mt-3">
   <ul *ngFor="let user of allTodo">
     <li
       class="list-unstyled m-3"
       *ngFor="let todo of user.todos"
       [ngClass]="{
-        'bg-success': todo.completed,
+        'bg-success ': todo.completed,
         'bg-danger': !todo.completed
       }"
     >

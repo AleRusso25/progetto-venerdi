@@ -1,4 +1,4 @@
-<div class="container" *ngIf="usersTodo">
+<div class="container bg-info bg-opacity-5 mt-3 p-2" *ngIf="usersTodo">
   <form>
     <input
       type="search"
@@ -7,11 +7,17 @@
       name="searchForm"
       (ngModelChange)="searchUser()"
     />
-    <button class="btn" type="submit" (click)="searchUser()">SEARCH</button>
+    <button
+      class="btn btn-primary rounded-pill px-3 m-3"
+      type="submit"
+      (click)="searchUser()"
+    >
+      SEARCH
+    </button>
   </form>
   <div class="row">
     <div class="col-3 gap-2" *ngFor="let user of usersTodo">
-      <div class="card h-100">
+      <div class="card h-100 bg-light">
         <img src="{{ user.image }}" class="card-img-top" alt="..." />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
